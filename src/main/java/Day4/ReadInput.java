@@ -7,35 +7,36 @@ import java.util.Scanner;
 public class ReadInput {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         List<Integer> list = new ArrayList<>();
 
-        // At least once
-        do {
-            System.out.print("Input a random number or (press 'y' to continue / press 'n' to stop): ");
-            String input = scanner.next();
-            if (input.equalsIgnoreCase("n")) {
+        while (true) {
+            System.out.print("Do you want to input a number? (press 'y' to continue / press 'n' to stop): ");
+            String response = scanner.next();
+
+            if (response.equalsIgnoreCase("n")) {
                 break;
             }
-            if (input.equalsIgnoreCase("y")) {
-                continue;
-            }
-                int number = 0;
+            if (response.equalsIgnoreCase("y")) {
+                System.out.print("Input a number: ");
+                String input = scanner.next();
 
+                int number = 0;
                 try {
                     number = Integer.parseInt(input);
                 } catch (NumberFormatException e) {
                     System.out.println("Invalid number: " + input);
                     continue;
                 }
+
                 list.add(number);
-
-
+            } else {
+                System.out.println("Invalid response. Please enter 'y' or 'n'.");
             }
-            while (list.size() < 3) ;
+        }
 
-            System.out.println("Inputted " + list.size() + " random numbers");
-            System.out.println("Inputted " + list.toString());
+        System.out.println("Inputted " + list.size() + " random numbers.");
+        System.out.println("Inputted " + list.toString());
 
+        scanner.close();
     }
 }
