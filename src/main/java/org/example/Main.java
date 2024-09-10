@@ -55,7 +55,7 @@ public class Main {
         FizzBuzz.generateFizzBuzz(n);*/
 
         //5. Two Sums
-        System.out.println("Enter the number of elements in the array: ");
+        /*System.out.println("Enter the number of elements in the array: ");
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[] nums = new int[n];
@@ -74,7 +74,7 @@ public class Main {
         // Print the result
         if (result.length > 0) {
             System.out.println("Indices: " + Arrays.toString(result));
-        }
+        }*/
 
 
 
