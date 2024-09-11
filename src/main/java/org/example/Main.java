@@ -84,7 +84,7 @@ public class Main {
             String filePath = "E:\\Jorge's Work\\Files\\product_sales_data.csv";
             FileReader reader = new FileReader();
 
-            Object[] data = reader.parseContent(filePath, 15);
+            Object[] data = reader.parseContent(filePath, 1000);
             String[] productName = (String[]) data[0];
             int[] totalSold = (int[]) data[1];
             double[] itemPrice = (double[]) data[2];
