@@ -78,7 +78,7 @@ public class Main {
             System.out.println("Indices: " + Arrays.toString(result));
         }*/
 
-        //Day 7 - File Reader
+        //Day 7 - File Reader.
 
         try {
             String filePath = "E:\\Jorge's Work\\Files\\product_sales_data.csv";
