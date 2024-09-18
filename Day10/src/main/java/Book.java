@@ -10,6 +10,7 @@ public class Book extends LibraryMaterial {
         this.contents = contents;
         currentPage = 0;
         firstTime = true;
+
     }
 
     public void setContents(String[] contents) {
